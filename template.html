@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="kfin-payment"></div>
+  <div id="kfin-register"></div>
+  <button id="registerBtn">Test</button>
+  <script src="dist/js/k_pay_checkout.js"></script>
+  <script src="dist/js/k_pay_register.js"></script>
+
+  <script>
+    KPAY_CHECKOUT.init({ text: 'test' })
+    KPAY_CHECKOUT.init({ text: 'test text' })
+
+    document.getElementById('registerBtn').addEventListener('click', () => {
+      KPAY_REGISTER.init({ text: 'register '})
+    })
+
+  </script>
+</body>
+</html>
