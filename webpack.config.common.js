@@ -2,7 +2,17 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  devServer: {
+    compress: true,
+    hot: true,
+    host: '0.0.0.0',
+    port: 3000,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+      publicPath: '/'
+    }
+  },
   entry: {
     k_pay_register: {
       import: path.resolve(__dirname, './packages/widgets/register.js'),

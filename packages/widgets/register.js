@@ -6,15 +6,11 @@ class RegisterWidget {
   static instance = null
 
   static init(options) {
-    console.log('log')
 
     const rootNode = document.getElementById('kfin-register')
 
-    if (this.instance) {
-      this.instance.unmount()
-    }
-    this.instance = ReactDOM.createRoot(rootNode); 
-    this.instance.render(React.createElement(App, options));
+    ReactDOM.unmountComponentAtNode(rootNode)
+    ReactDOM.render(React.createElement(App, options), rootNode);
   }
 } 
 

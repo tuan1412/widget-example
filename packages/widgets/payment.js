@@ -10,11 +10,12 @@ class PaymentWidget {
 
     const rootNode = document.getElementById('kfin-payment')
 
-    if (this.instance) {
-      this.instance.unmount()
-    }
-    this.instance = ReactDOM.createRoot(rootNode); 
-    this.instance.render(React.createElement(App, options));
+    ReactDOM.render(React.createElement(App, options), rootNode);
+  }
+
+  static destroy() {
+    const rootNode = document.getElementById('kfin-payment')
+    ReactDOM.unmountComponentAtNode(rootNode)
   }
 } 
 
