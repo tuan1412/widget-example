@@ -1,10 +1,11 @@
 import React from 'react'
-import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog";
-import "@reach/dialog/styles.css";
+import { Dialog } from '@reach/dialog'
+
+import '@reach/dialog/styles.css'
 
 function Register(props) {
-  const [showDialog, setShowDialog] = React.useState(true);
-  const close = () => setShowDialog(false);
+  const [showDialog, setShowDialog] = React.useState(true)
+  const close = () => setShowDialog(false)
 
   return (
     <Dialog isOpen={showDialog}>
