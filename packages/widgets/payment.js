@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import App from '../ui/root/Payment'
 
 class PaymentWidget {
@@ -13,9 +14,9 @@ class PaymentWidget {
     if (this.instance) {
       this.instance.unmount()
     }
-    this.instance = ReactDOM.createRoot(rootNode); 
-    this.instance.render(React.createElement(App, options));
+    this.instance = ReactDOM.createRoot(rootNode)
+    this.instance.render(React.createElement(App, options))
   }
-} 
+}
 
 export default PaymentWidget
